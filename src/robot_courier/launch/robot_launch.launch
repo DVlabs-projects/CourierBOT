@@ -1,0 +1,30 @@
+<launch>
+<!-- Параметры запуска -->
+    <arg name="rviz" default="false" />
+    <arg name="rqt" default="false" />
+
+    <!-- Запуск узла лидара -->
+    <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+
+    <!-- Запуск узла камеры -->
+    <node name="realsense_camera" pkg="realsense2_camera" type="realsense2_camera_node" output="screen" />
+
+    <!-- Запуск узла IMU -->
+    <node pkg="imu_bosch" type="imu_node" name="imu_node" output="screen" />
+
+    <!-- Запуск узла управления двигателями -->
+    <node pkg="rosserial_python" type="serial_node.py" name="motor_controller">
+        <param name="port" value="/dev/ttyACM0" />
+        <param name="baud" value="57600" />
+    </node>
+
+    <!-- Запуск RViz при необходимости -->
+    <group if="$(arg rviz)">
+        <node name="rviz" pkg="rviz" type="rviz" args="-d $(find robot_courier)/rviz/robot_courier.rviz" />
+    </group>
+
+    <!-- Запуск RQT при необходимости -->
+    <group if="$(arg rqt)">
+        <node name="rqt" pkg="rqt_gui" type="rqt_gui" />
+    </group>
+</launch>
