@@ -17,6 +17,7 @@
 
    bash
    git clone https://github.com/DVlabs-projects/CourierBOT.git
+   cd CourierBOT
    
 2. Установите необходимые пакеты:
 
@@ -28,12 +29,12 @@
 
    bash
    chmod +x setup_ssh.sh
-./setup_ssh.sh
+   ./setup_ssh.sh
    
 4. Инициализируйте рабочее пространство ROS:
 
    bash
-   cd robotcourier
+   cd src/robot_courier
    catkin_make
    source devel/setup.bash
    
