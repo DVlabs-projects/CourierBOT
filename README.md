@@ -4,10 +4,6 @@
 
 Проект автономного робота-курьера для доставки посылок внутри офисного здания.
 
-## Схема подключения компонентов
-
-![Схема подключения](docs/connection_diagram.png)
-
 ## Установка
 
 ### Требования
@@ -20,7 +16,7 @@
 1. Клонируйте репозиторий:
 
    bash
-   git clone https://github.com/yourusername/robotcourierws.git
+   git clone https://github.com/DVlabs-projects/CourierBOT.git
    cd robotcourierws
    
 2. Установите необходимые пакеты:
@@ -38,7 +34,7 @@
 4. Инициализируйте рабочее пространство ROS:
 
    bash
-   cd robotcourierws
+   cd robotcourier
    catkin_make
    source devel/setup.bash
    
@@ -59,11 +55,6 @@ roslaunch robotcourier robotlaunch.launch rviz:=true
 
 bash
 roslaunch robotcourier robotlaunch.launch rqt:=true
-
-## Документация
-
-- [Описание пакетов](docs/packages.md)
-- [Инструкция по сборке Docker-образа](docs/docker.md)
 
 ## Обратная связь
 
