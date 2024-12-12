@@ -17,7 +17,6 @@
 
    bash
    git clone https://github.com/DVlabs-projects/CourierBOT.git
-   cd robotcourierws
    
 2. Установите необходимые пакеты:
 
