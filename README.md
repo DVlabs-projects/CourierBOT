@@ -34,7 +34,7 @@
 4. Инициализируйте рабочее пространство ROS:
 
    bash
-   cd src/robot_courier
+   cd CourierBOT
    catkin_make
    source devel/setup.bash
    
