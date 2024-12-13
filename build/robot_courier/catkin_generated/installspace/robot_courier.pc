@@ -1,0 +1,8 @@
+prefix=/home/dvlabs/CourierBOT/install
+
+Name: robot_courier
+Description: Description of robot_courier
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

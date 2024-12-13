@@ -1,0 +1,2 @@
+robot_courier
+-DCATKIN_DEVEL_PREFIX=/home/dvlabs/CourierBOT/devel -DCMAKE_INSTALL_PREFIX=/home/dvlabs/CourierBOT/install -G Unix Makefiles

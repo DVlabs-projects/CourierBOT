@@ -44,17 +44,17 @@
 ### Запуск всех узлов:
 
 bash
-roslaunch robot_courier robotlaunch.launch
+roslaunch robot_courier robot_launch.launch
 
 ### Запуск с визуализацией в RViz:
 
 bash
-roslaunch robot_courier robotlaunch.launch rviz:=true
+roslaunch robot_courier robot_launch.launch rviz:=true
 
 ### Запуск с инструментами RQT:
 
 bash
-roslaunch robot_courier robotlaunch.launch rqt:=true
+roslaunch robot_courier robot_launch.launch rqt:=true
 
 ## Обратная связь
 
