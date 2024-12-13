@@ -6,8 +6,16 @@
     <!-- Запуск узла лидара -->
     <include file="$(find rplidar_ros)/launch/rplidar.launch" />
 
-    <!-- Запуск узла камеры -->
-    <node name="realsense_camera" pkg="realsense2_camera" type="realsense2_camera_node" output="screen" />
+
+    <!-- Узел для веб-камеры ноутбука -->
+    <node pkg="usb_cam" type="usb_cam_node" name="usb_cam" output="screen">
+    <param name="video_device" value="/dev/video0" />
+    <param name="image_width" value="640" />
+    <param name="image_height" value="480" />
+    <param name="framerate" value="30" />
+    <param name="pixel_format" value="mjpeg" />
+    </node>
+
 
     <!-- Запуск узла IMU -->
     <node pkg="imu_bosch" type="imu_node" name="imu_node" output="screen" />
