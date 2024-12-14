@@ -4,7 +4,7 @@
     <arg name="rqt" default="false" />
 
     <!-- Запуск узла лидара -->
-    <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+   <<include file="$(find rplidar_ros)/launch/rplidar_c1.launch" />
 
 
     <!-- Узел для веб-камеры ноутбука -->
